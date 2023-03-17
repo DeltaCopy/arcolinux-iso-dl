@@ -9,5 +9,4 @@ Python QT5 Application
 - Export your locally installed packages and save this to disk
 - Download 40 different ISOs from SourceForge
 - Validate the ISO download using the associated .sha256 checksum
-- Change the SourceForge mirror to select another download server (for a full list see https://sourceforge.net/p/forge/documentation/Mirrors/). This is currently set inside a config file
-
+- Change the SourceForge mirror to select another download server (for a full list see https://sourceforge.net/p/forge/documentation/Mirrors/)
