@@ -14,3 +14,20 @@ An unofficial Python QT5 Application to download ArcoLinux based ISOs from Sourc
 - ArcoLinuxB  GitHub: https://github.com/arcolinuxb
 
 - ArcoLinux Website: https://arcolinux.com
+
+# Usage
+
+## Requirements
+
+- PyQt5==5.15.9
+- requests==2.28.2
+- tomli==2.0.1
+
+pip install -r requirements.txt
+
+## Running
+
+cd to bin directory
+open the script start-app.sh
+study the script, and check what it is doing
+run it ./start-app.sh
