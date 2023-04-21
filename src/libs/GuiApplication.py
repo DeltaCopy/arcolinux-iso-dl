@@ -174,16 +174,11 @@ class GuiApplication(QMainWindow):
         self.actionView_local_pkglist_view.setObjectName("actionView_local_pkglist_view")
         self.actionView_local_pkglist_view.setText("View local packages")
 
-        self.actionCheck_for_package_updates = QtWidgets.QAction(self)
-        self.actionCheck_for_package_updates.setObjectName("actionCheck_for_package_updates")
-        self.actionCheck_for_package_updates.setText("Check pacman updates")
-
         self.menuFile.addAction(self.actionExit_Downloader)
         self.menuHelp.addAction(self.actionAbout)
         self.menuFind.addAction(self.actionSearch_remote_pkg)
         self.menuFind.addAction(self.actionSearch_local_pkg_list)
         self.menuTools.addAction(self.actionView_local_pkglist_view)
-        self.menuTools.addAction(self.actionCheck_for_package_updates)
         self.menuBar.addAction(self.menuFile.menuAction())
         self.menuBar.addAction(self.menuFind.menuAction())
         self.menuBar.addAction(self.menuTools.menuAction())
@@ -232,28 +227,6 @@ class GuiApplication(QMainWindow):
 
         self.actionView_local_pkglist_view.triggered.connect(lambda: self.display_local_pkg_list())
         self.actionView_local_pkglist_view.setIcon(QtGui.QIcon(":/app_images/images/view.png"))
-
-        self.actionCheck_for_package_updates.triggered.connect(lambda: self.pkg_updates())
-        self.actionCheck_for_package_updates.setIcon(QtGui.QIcon(":/app_images/images/update.png"))
-
-    def pkg_updates(self):
-        yay_cmd = "/usr/bin/yay"
-        if os.path.exists(yay_cmd):
-            process_pkg_update = 1
-            print("Running %s -%s" %(yay_cmd, "Sy"))
-            process_pkg_update = subprocess.check_call([yay_cmd, "-Sy"])
-
-            if process_pkg_update == 0:
-
-                process_pkg_updates =  subprocess.check_output([yay_cmd, '-Qu'])
-
-                if process_pkg_updates is not None:
-                    pkg_updates_len = len(process_pkg_updates.decode("utf-8").strip().split("\n"))
-
-
-                    self.statusbar.setStyleSheet("font-weight: bold")
-
-                    self.statusbar.showMessage(str("Package update(s) available = %s"% pkg_updates_len),5000)
 
     def display_local_pkg_list(self):
 
@@ -870,6 +843,8 @@ class GuiApplication(QMainWindow):
             print("[DownloaderThread] Delete ISO download thread")
             del self.downloader_iso_t
 
+        # update the download_cancel button text to Close from Cancel
+        self.pushButton_dialog_download_cancel.setText("Close")
 
         if self.download_sha256 == True \
             and self.download_iso == True \
