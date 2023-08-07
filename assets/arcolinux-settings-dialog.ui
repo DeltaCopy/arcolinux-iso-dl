@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>444</width>
+    <height>347</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="toolTip">
+   <string notr="true"/>
+  </property>
+  <widget class="QLineEdit" name="lineEdit">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>10</y>
+     <width>331</width>
+     <height>39</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string extracomment="Enter the path where to save the ISO"/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_settings_dpath">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>20</y>
+     <width>91</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Download Path:</string>
+   </property>
+  </widget>
+  <widget class="QDialogButtonBox" name="buttonBox_dialog_settings">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>300</y>
+     <width>381</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+   <property name="standardButtons">
+    <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+   </property>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_Settings">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>60</y>
+     <width>271</width>
+     <height>231</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>GroupBox</string>
+   </property>
+   <widget class="QRadioButton" name="radioButton_sf_global">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>60</y>
+      <width>161</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>onboardcloud-sg</string>
+    </property>
+    <property name="checked">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="radioButton_belnet_be">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>90</y>
+      <width>161</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>belnet-belgium</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="radioButton_aarnet_au">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>120</y>
+      <width>161</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>aarnet-au</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="radioButton_accum_sw">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>150</y>
+      <width>161</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>accum-sweden</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="radioButton_jiink_sg">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>180</y>
+      <width>161</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>jingk-singapore</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_settings_provider">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>30</y>
+      <width>171</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Select SourceForge Mirror</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
